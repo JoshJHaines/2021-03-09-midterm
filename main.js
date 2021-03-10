@@ -58,20 +58,29 @@ function firstPunctuationIndex(str) {
 
 function getPlace(highScores, newScore) {
 	for (score of highScores) {
-		place = highScores.indexOf(score) + 1;
-		if (newScore >= highScores[0]) {
-			return `1st place`;
-		}
-		if (newScore >= highScores[1]) {
-			return `2nd place`;
-		}
-		if (newScore >= highScores[2]) {
-			return `3rd place`;
-		} else if (newScore >= score) {
-			return `${place}th place`;
-		}
-	}
+		place = (highScores.indexOf(score) +1).toString();
+        lastPlace = highScores.length
+        if (newScore >= score){
+            if (place.endsWith("1")){
+                return `${place}st place`
+            }
+            if (place.endsWith("2")){
+                return `${place}nd place`
+            }
+            if (place.endsWith("3")){
+                return `${place}rd place`
+            } else {
+                return `${place}th place`
+            }
+        } else {
+            
+        }
+    }
 }
+
+test = getPlace ([19, 18, 16],20)
+test 
+
 // ┌─────────────────────────────────────┐
 // │ Do not modify code below this line. │
 // └─────────────────────────────────────┘
