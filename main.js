@@ -73,13 +73,23 @@ function getPlace(highScores, newScore) {
                 return `${place}th place`
             }
         } else {
-            
+            highScores.push(newScore)
         }
     }
 }
 
-test = getPlace ([19, 18, 16],20)
-test 
+test1 = getPlace ([19, 18, 16, 15, 14, 13, 12, 11, 10],20)
+test1 
+test2 = getPlace ([29, 18, 16, 15, 14, 13, 12, 11, 10],18)
+test2
+test3 = getPlace ([19, 18, 16, 15, 14, 13, 12, 11, 10],16)
+test3 
+test4 = getPlace ([19, 18, 16, 15, 14, 13, 12, 11, 10],14)
+test4 
+test5 = getPlace ([19, 18, 16, 15, 14, 13, 12, 11, 10],12)
+test5 
+test6 = getPlace ([19, 18, 16, 15, 14, 13, 12, 11, 10],9)
+test6 
 
 // ┌─────────────────────────────────────┐
 // │ Do not modify code below this line. │
