@@ -32,7 +32,7 @@ function numOddValues(arr) {
 			countOfOdds++;
 		}
 	}
-    return countOfOdds;
+	return countOfOdds;
 }
 
 function averageStringLength(arr) {
@@ -47,30 +47,30 @@ function averageStringLength(arr) {
 	}
 }
 
-function firstPunctuationIndex(str){
-    ind = str.indexOf('!' || '?')
-    ind
-    return str.indexOf('!')
+function firstPunctuationIndex(str) {
+	for (char of str) {
+		if (char === "." || char === "!" || char === "?") {
+			return str.indexOf(char);
+		}
+	}
+	return -1;
 }
-test  = firstPunctuationIndex('wow? that is so crazy!!!!')
-test
 
-
-function getPlace(highScores, newScore){
-    for(score of highScores){
-        place = highScores.indexOf(score) + 1
-        if (newScore >= highScores[0]){
-            return `1st place`
-        }
-        if (newScore >= highScores[1]){
-            return `2nd place`
-        }
-        if (newScore >= highScores[2]){
-            return `3rd place`
-        } else if (newScore >= score){
-            return `${place}th place`
-        }
-    }
+function getPlace(highScores, newScore) {
+	for (score of highScores) {
+		place = highScores.indexOf(score) + 1;
+		if (newScore >= highScores[0]) {
+			return `1st place`;
+		}
+		if (newScore >= highScores[1]) {
+			return `2nd place`;
+		}
+		if (newScore >= highScores[2]) {
+			return `3rd place`;
+		} else if (newScore >= score) {
+			return `${place}th place`;
+		}
+	}
 }
 // ┌─────────────────────────────────────┐
 // │ Do not modify code below this line. │
