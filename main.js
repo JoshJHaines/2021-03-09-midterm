@@ -25,6 +25,15 @@ function oddIndices(arr){
     return newArr
 }
 
+function numOddValues(arr){
+    countOfOdds = 0
+    for (index of arr){
+        if (index % 2 !== 0){
+            countOfOdds++
+        }
+    }
+    return countOfOdds
+}
 // ┌─────────────────────────────────────┐
 // │ Do not modify code below this line. │
 // └─────────────────────────────────────┘
