@@ -15,24 +15,36 @@ function ageToAbilities(num) {
 	}
 }
 
-function oddIndices(arr){
-    newArr = []
-    for (i = 0; i < arr.length; i ++){
-        if (i % 2 !== 0){
-            newArr.push(arr[i])
-        }
-    }
-    return newArr
+function oddIndices(arr) {
+	newArr = [];
+	for (i = 0; i < arr.length; i++) {
+		if (i % 2 !== 0) {
+			newArr.push(arr[i]);
+		}
+	}
+	return newArr;
 }
 
-function numOddValues(arr){
-    countOfOdds = 0
-    for (index of arr){
-        if (index % 2 !== 0){
-            countOfOdds++
-        }
-    }
-    return countOfOdds
+function numOddValues(arr) {
+	countOfOdds = 0;
+	for (index of arr) {
+		if (index % 2 !== 0) {
+			countOfOdds++;
+		}
+	}
+	return countOfOdds;
+}
+
+function averageStringLength(arr) {
+	lengthOfAllStr = 0;
+	if (arr.length === 0) {
+		return 0;
+	} else {
+		for (index of arr) {
+			lengthOfAllStr += index.length;
+		}
+		return lengthOfAllStr / arr.length;
+	}
 }
 // ┌─────────────────────────────────────┐
 // │ Do not modify code below this line. │
